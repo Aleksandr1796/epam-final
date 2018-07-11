@@ -1,0 +1,1038 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+html, body {
+	background-color: #FBFBFB;
+	font-family: 'EB Garamond', serif;
+}
+@media screen and (min-width: 1500px) {
+	nav[role="navigation"] {
+		display: none;
+	}
+	header {
+		height: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header > a {
+		margin-left: 50px;
+		font-size: 22px;
+		color: black;
+		text-decoration: none;
+	}
+	header > nav > ul {
+		display: flex;
+	}
+	header > nav > ul > li > a {
+		margin-right: 50px;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		letter-spacing: 2px;
+		transition: color .4s ease;
+	}
+	header > nav > ul > li > a:hover {
+		color: #D16768;
+	}
+	.head-description {
+		margin: 50px auto;
+	}
+	.head-description > h1 {
+		margin: 20px auto;
+		font-size: 5rem;
+		text-align: center;
+	}
+	.head-description > .border-line {
+		width: 5%;
+		margin: 0 auto;
+		border-bottom: 1px solid black;
+	}
+	.head-description > h3 {
+		text-align: center;
+		margin: 20px auto;
+		color: #D16768;
+	}
+	.head-description > .head-description-text {
+		width: 30%;
+		margin: 50px auto;
+		font-size: 1.3rem;
+		line-height: 1.5;
+	}
+	.main-content {
+		display: grid;
+		grid-gap: 80px;
+		grid-template: auto auto;
+		width: 60%;
+		margin: 0 auto;
+	}
+	.main-content img {
+		width: 100%;
+	}
+	.main-content > .grid-item-1, .main-content > .grid-item-2, 
+	.main-content > .grid-item-5 {
+		grid-column: 1 / span 2;
+	}
+	.main-content figcaption {
+		text-align: center;
+		color: #cdcdcd;
+		margin: 10px auto;
+	}
+	.other-pages {
+		margin-top: 50px;
+		padding: 30px 0;
+		background-color: #F0F0F0;
+		text-align: center;
+	}
+	.other-pages > h3 {
+		text-decoration: none;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.border-other-pages-title {
+		width: 10%;
+		margin: 20px auto;
+		border-bottom: 1px solid black;
+	}
+	.other-pages-articles {
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.other-pages-articles > article {
+		width: 19%;
+		margin: 1% 3%;
+	}
+	.other-pages-articles > article > a {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	.other-pages-articles article > h3 {
+		margin-top: 10px;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	.other-pages-articles > article > a > img {
+		width: 100%;
+	}
+	.other-pages-articles .fon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity .4s ease;
+	}
+	.other-pages-articles .fon:hover {
+		opacity: 0.2;
+	}
+	footer {
+		margin: 50px;
+		text-align: center;
+	}
+	footer > section {
+		display: flex;
+		justify-content: center;
+	}
+	footer > section > article > a {
+		margin: 10px;
+		font-size: 25px;
+		color: black;
+		transition: color .4s ease;
+	}
+	footer > section > article > a:hover {
+		color: #333333;
+	}
+	.modal-dialog {
+		height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+    }
+    .modal-dialog:target {
+        display: block;
+        pointer-events: auto;
+	}
+	.modal-dialog > div {
+		position: relative;
+		padding: 50px;
+		display: flex;
+		width: 95%;
+		height: 90%;
+		margin: 0 auto;
+	}
+    .modal-dialog > div > img {
+		height: 100%;
+		width: auto;
+        margin: 0 auto;
+    }
+    .modal-dialog > div h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .modal-dialog > div p {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+        content: "";             /* Добавляем наш псевдоэлемент */
+        display: block;			 /* Делаем его блочным элементом */
+        position: absolute;      /* Позиционируем его абсолютным образом */
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+	}
+	.modal-dialog > div > a {
+		margin: auto 0;
+		text-decoration: none;
+		color: #cdcdcd;
+	}
+	.modal-dialog > div > a > i.fas {
+		font-size: 60px;
+	}
+    .close {
+        color: #e5e5e5;
+        line-height: 25px;
+        position: absolute;
+        right: 4%;
+        top: 5%;
+        text-align: center;
+        width: 28px;
+        font-size: 36px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+@media screen and (min-width: 1220px) and (max-width: 1499px) {
+	nav[role="navigation"] {
+		display: none;
+	}
+	header {
+		height: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header > a {
+		margin-left: 50px;
+		font-size: 22px;
+		color: black;
+		text-decoration: none;
+	}
+	header > nav > ul {
+		display: flex;
+	}
+	header > nav > ul > li > a {
+		margin-right: 50px;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		letter-spacing: 2px;
+		transition: color .4s ease;
+	}
+	header > nav > ul > li > a:hover {
+		color: #D16768;
+	}
+	.head-description {
+		margin: 50px auto;
+	}
+	.head-description > h1 {
+		margin: 20px auto;
+		font-size: 5rem;
+		text-align: center;
+	}
+	.head-description > .border-line {
+		width: 5%;
+		margin: 0 auto;
+		border-bottom: 1px solid black;
+	}
+	.head-description > h3 {
+		text-align: center;
+		margin: 20px auto;
+		color: #D16768;
+	}
+	.head-description > .head-description-text {
+		width: 50%;
+		margin: 50px auto;
+		font-size: 1.3rem;
+		line-height: 1.5;
+	}
+	.main-content {
+		display: grid;
+		grid-gap: 100px;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.main-content > .grid-item-1, .main-content > .grid-item-2, 
+	.main-content > .grid-item-5 {
+		grid-column: 1 /  span 2;
+	}
+	.main-content img {
+		width: 100%;
+	}
+	.main-content figcaption {
+		text-align: center;
+		color: #cdcdcd;
+		margin: 10px auto;
+	}
+	.other-pages {
+		padding: 30px 0;
+		background-color: #F0F0F0;
+		text-align: center;
+	}
+	.other-pages > h3 {
+		text-decoration: none;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.other-pages-articles {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.other-pages-articles > article {
+		width: 27%;
+		margin: 1% 3%;
+	}
+	.other-pages-articles > article > a {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	.other-pages-articles article > h3 {
+		margin-top: 10px;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	.other-pages-articles > article > a > img {
+		width: 100%;
+	}
+	.other-pages-articles .fon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity .4s ease;
+	}
+	.other-pages-articles .fon:hover {
+		opacity: 0.2;
+	}
+	footer {
+		margin: 50px;
+		text-align: center;
+	}
+	footer > section {
+		display: flex;
+		justify-content: center;
+	}
+	footer > section > article > a {
+		margin: 10px;
+		font-size: 25px;
+		color: black;
+		transition: color .4s ease;
+	}
+	footer > section > article > a:hover {
+		color: #333333;
+	}
+	.modal-dialog {
+		width: 100%;
+		height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        transition: opacity 400ms ease-in;
+        display: none;
+		pointer-events: none;
+		text-align: center;
+    }
+    .modal-dialog:target {
+        display: block;
+        pointer-events: auto;
+	}
+	.modal-dialog > div {
+		position: relative;
+		display: inline-block;
+		padding: 50px;
+		margin: 0 auto;
+		margin-right: 0;
+	}
+    .modal-dialog > div > img {
+		height: auto;
+		width: 65%;
+        margin: 0 auto;
+    }
+    .modal-dialog > div h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .modal-dialog > div p {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+        content: "";             /* Добавляем наш псевдоэлемент */
+        display: block;			 /* Делаем его блочным элементом */
+        position: absolute;     /* Позиционируем его абсолютным образом*/
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+	}
+	#leftControl {
+		left: 10%;
+	}
+	#rightControl {
+		right: 10%;
+	}
+	.modal-dialog > div > a {
+		position: absolute;
+		text-decoration: none;
+		color: #cdcdcd;
+	}
+	.modal-dialog > div > a:not(.close) {
+		top: 45%;
+	}
+	.modal-dialog > div > a > i.fas {
+		font-size: 60px;
+	}
+    .close {
+        color: #e5e5e5;
+        line-height: 25px;
+        position: absolute;
+        right: 6%;
+        top: 5%;
+        text-align: center;
+        width: 28px;
+        font-size: 36px;
+        text-decoration: none;
+		font-weight: bold;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1219px) {
+	nav[role="navigation"] {
+		display: none;
+	}
+	header {
+		height: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header > a {
+		margin-left: 50px;
+		font-size: 22px;
+		color: black;
+		text-decoration: none;
+	}
+	header > nav > ul {
+		display: flex;
+	}
+	header > nav > ul > li > a {
+		margin-right: 50px;
+		font-size: 20px;
+		color: black;
+		text-decoration: none;
+		letter-spacing: 2px;
+		transition: color .4s ease;
+	}
+	header > nav > ul > li > a:hover {
+		color: #D16768;
+	}
+	.head-description {
+		margin: 50px auto;
+	}
+	.head-description > h1 {
+		margin: 20px auto;
+		font-size: 5rem;
+		text-align: center;
+	}
+	.head-description > .border-line {
+		width: 10%;
+		margin: 0 auto;
+		border-bottom: 1px solid black;
+	}
+	.head-description > h3 {
+		text-align: center;
+		margin: 20px auto;
+		color: #D16768;
+	}
+	.head-description > .head-description-text {
+		width: 70%;
+		margin: 50px auto;
+		font-size: 1.5rem;
+		line-height: 1.5;
+	}
+	.main-content {
+		display: grid;
+		grid-gap: 50px;
+		grid-template-columns: auto auto;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.main-content > .grid-item-5 {
+		grid-column: 1 / span 2;
+	}
+	.main-content img {
+		width: 100%;
+	}
+	.main-content figcaption {
+		text-align: center;
+		color: #cdcdcd;
+		margin: 10px auto;
+	}
+	.other-pages {
+		padding: 30px 0;
+		background-color: #F0F0F0;
+		text-align: center;
+	}
+	.other-pages > h3 {
+		text-decoration: none;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.other-pages-articles {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.other-pages-articles > article {
+		width: 27%;
+		margin: 1% 3%;
+	}
+	.other-pages-articles > article > a {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	.other-pages-articles article > h3 {
+		margin-top: 10px;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	.other-pages-articles > article > a > img {
+		width: 100%;
+	}
+	.other-pages-articles .fon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity .4s ease;
+	}
+	.other-pages-articles .fon:hover {
+		opacity: 0.2;
+	}
+	footer {
+		margin: 50px;
+		text-align: center;
+	}
+	footer > section {
+		display: flex;
+		justify-content: center;
+	}
+	footer > section > article > a {
+		margin: 10px;
+		font-size: 25px;
+		color: black;
+		transition: color .4s ease;
+	}
+	footer > section > article > a:hover {
+		color: #333333;
+	}
+	#open-modal {
+		display: none;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 959px) {
+	.main-nav {
+		display: none;
+	}
+	header > a:first-child {
+		display: none;
+	}
+	nav[role="navigation"] > a {
+		position: absolute;
+		font-size: 36px;
+		top: 50px;
+		left: 40px;
+		text-decoration: none;
+		color: black;
+	}
+	#menuToggle {
+        display: block;
+        position: relative;
+		top: 50px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    #menuToggle input {
+          display: block;
+          width: 40px;
+		  height: 32px;
+		  margin-left: 85vw;
+          position: absolute;
+          top: -7px;
+          left: -5px;
+          cursor: pointer;
+          opacity: 0; 
+          z-index: 2; 
+          -webkit-touch-callout: none;
+    }
+    #menuToggle span {
+		display: block;
+		margin-left: 85vw;
+		margin-bottom: 5px;
+		width: 33px;
+		height: 4px;
+		position: relative;
+		background: #cdcdcd;
+		border-radius: 3px;
+		z-index: 1;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #cdcdcd;;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    #menu {
+      position: absolute;
+	  width: 100%;
+	  height: 85vh;
+      margin: -100px 0 0 -52px;
+      padding: 50px; 
+      padding-top: 125px; 
+      padding-right: 0;
+      background: white;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(0%, -100%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    }
+     #menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 26px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    #menu li {
+      margin: 30px 0;
+      font-size: 3rem;
+    }
+    #menuToggle input:checked ~ ul {
+      transform: none;
+	}
+	.head-description {
+		margin: 150px auto;
+	}
+	.head-description > h1 {
+		margin: 20px auto;
+		font-size: 5rem;
+		text-align: center;
+	}
+	.head-description > .border-line {
+		width: 10%;
+		margin: 0 auto;
+		border-bottom: 1px solid black;
+	}
+	.head-description > h3 {
+		text-align: center;
+		margin: 20px auto;
+		color: #D16768;
+	}
+	.head-description > .head-description-text {
+		width: 90%;
+		text-align: justify;
+		margin: 50px auto;
+		font-size: 1.5rem;
+		line-height: 1.5;
+	}
+	.main-content {
+		display: grid;
+		grid-gap: 20px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	/* .main-content > .grid-item-1 {
+		grid-column: 1 / span 2;
+	}
+	.main-content > .grid-item-2 {
+		grid-column: 1 / span 2;
+	} */
+	/* .main-content > .grid-item-3 {
+		grid-column: 1 / span 2;
+	}
+	.main-content > .grid-item-4 {
+		grid-column: 1 / span 2;
+	}  */
+	.main-content > .grid-item-5 {
+		grid-column: 1 / span 2;
+	}
+	/* .main-content > .grid-item-6 {
+		grid-column: 1 / span 2;
+	} 
+	.main-content > .grid-item-7 {
+		grid-column: 1 / span 2;
+	}  */
+	.main-content img {
+		width: 100%;
+	}
+	.main-content figcaption {
+		text-align: center;
+		color: #cdcdcd;
+		margin: 10px auto;
+	}
+	.other-pages {
+		padding: 30px 0;
+		background-color: #F0F0F0;
+		text-align: center;
+	}
+	.other-pages > h3 {
+		text-decoration: none;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.other-pages-articles {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.other-pages-articles > article {
+		width: 44%;
+		margin: 1% 3%;
+	}
+	.other-pages-articles > article > a {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	.other-pages-articles article > h3 {
+		margin-top: 10px;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	.other-pages-articles > article > a > img {
+		width: 100%;
+	}
+	.other-pages-articles .fon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity .4s ease;
+	}
+	.other-pages-articles .fon:hover {
+		opacity: 0.2;
+	}
+	footer {
+		margin: 50px auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1.5;
+		font-size: 24px;
+	}
+	footer > section {
+		display: flex;
+		justify-content: space-between;
+	}
+	footer > section > article > a {
+		margin: 10px;
+		font-size: 36px;
+		color: black;
+		transition: color .4s ease;
+	}
+	footer > section > article > a:hover {
+		color: #333333;
+	}
+	#open-modal {
+		display: none;
+	}
+}
+@media screen and (max-width: 479px) {
+	.main-nav {
+		display: none;
+	}
+	header > a:first-child {
+		display: none;
+	}
+	nav[role="navigation"] > a {
+		position: absolute;
+		font-size: 36px;
+		top: 45px;
+		left: 40px;
+		text-decoration: none;
+		color: black;
+	}
+	#menuToggle {
+        display: block;
+        position: relative;
+		top: 50px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    #menuToggle input {
+          display: block;
+          width: 40px;
+		  height: 32px;
+		  margin-left: 80vw;
+          position: absolute;
+          top: -7px;
+          left: -5px;
+          cursor: pointer;
+          opacity: 0; 
+          z-index: 2; 
+          -webkit-touch-callout: none;
+    }
+    #menuToggle span {
+		display: block;
+		margin-left: 80vw;
+		margin-bottom: 5px;
+		width: 33px;
+		height: 4px;
+		position: relative;
+		background: #cdcdcd;
+		border-radius: 3px;
+		z-index: 1;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+    #menuToggle span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    #menuToggle input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #cdcdcd;;
+    }
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+    #menu {
+      position: absolute;
+      width: 100%;
+	  margin: -100px 0 0 -52px;
+	  height: 85vh;
+      padding: 50px;
+      padding-top: 125px;
+      padding-right: 0;
+      background: white;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(0%, -100%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    }
+     #menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 26px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    #menu li {
+      margin: 50px 0;
+      font-size: 3rem;
+    }
+    #menuToggle input:checked ~ ul {
+      transform: none;
+	}
+	.head-description {
+		margin: 150px auto;
+		margin-bottom: 50px;
+	}
+	.head-description > h1 {
+		margin: 20px auto;
+		font-size: 3rem;
+		text-align: center;
+	}
+	.head-description > .border-line {
+		width: 50%;
+		margin: 0 auto;
+		border-bottom: 1px solid black;
+	}
+	.head-description > h3 {
+		text-align: center;
+		margin: 20px auto;
+		color: #D16768;
+	}
+	.head-description > .head-description-text {
+		width: 90%;
+		text-align: justify;
+		margin: 50px auto;
+		font-size: 1.5rem;
+		line-height: 1.5;
+	}
+	.main-content {
+		display: grid;
+		grid-gap: 10px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.main-content img {
+		width: 100%;
+	}
+	.main-content figcaption {
+		text-align: center;
+		color: #cdcdcd;
+		margin: 10px auto;
+	}
+	.other-pages {
+		padding: 30px 0;
+		background-color: #F0F0F0;
+		text-align: center;
+	}
+	.other-pages > h3 {
+		text-decoration: none;
+		color: black;
+		font-size: 1.5rem;
+	}
+	.border-other-pages-title {
+		width: 10%;
+		margin: 0 auto;
+	}
+	.other-pages-articles {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.other-pages-articles > article {
+		width: 44%;
+		margin: 1% 3%;
+	}
+	.other-pages-articles > article > a {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+	}
+	.other-pages-articles article > h3 {
+		margin-top: 10px;
+		letter-spacing: 2px;
+		text-align: center;
+	}
+	.other-pages-articles > article > a > img {
+		width: 100%;
+	}
+	.other-pages-articles .fon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity .4s ease;
+	}
+	.other-pages-articles .fon:hover {
+		opacity: 0.2;
+	}
+	footer {
+		margin: 50px auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1.5;
+		font-size: 24px;
+	}
+	footer > section {
+		display: flex;
+		justify-content: space-between;
+	}
+	footer > section > article > a {
+		margin: 10px;
+		font-size: 36px;
+		color: black;
+		transition: color .4s ease;
+	}
+	footer > section > article > a:hover {
+		color: #333333;
+	}
+	#open-modal {
+		display: none;
+	}
+}

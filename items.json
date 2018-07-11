@@ -1,0 +1,17 @@
+[	
+	{"title": "Lost in Public",	"src": "../source/LostInPublic/1.jpg", "class": "article-w", "link": "pages/lostinpublic.html", "relation": ["architecture"]},
+	{"title": "Characters Captured","src": "../source/CharactersCaptured/1.jpg", "class": "article-h", "link": "pages/characterscaptures.html", "relation": ["editorial", "portraits"]},
+	{"title": "A Skater’s Paradise","src": "../source/aSkatersParadise/6.jpg", "class": "article-w", "link": "pages/skatersparadise.html", "relation": ["travels"]},
+	{"title": "Warmth of Future Waves","src": "../source/WarmthOfFeatureWaves/3.jpg", "class": "article-h", "link": "pages/warmsofwaves.html", "relation": ["editorial"]},
+	{"title": "Glow My Life","src": "../source/GlowMyLife/1.jpg", "class":"article-w", "link": "pages/glowmylife.html", "relation": ["editorial", "portraits"]},
+	{"title": "Ordinary Seen Minimally","src": "../source/OrdinallySeenMinimally/1.jpg", "class": "article-w", "link": "pages/ordinaryseenminimally.html", "relation": ["editorial"]},
+	{"title": "Old Chrome Enthusiasm","src": "../source/OldChromeEnthusiasm/1.jpg", "class": "article-w", "link": "pages/oldchrome.html", "relation": ["editorial"]},
+	{"title": "Japanese Dictionary","src": "../source/JapanesDictionary/2.jpg", "class": "article-h", "link": "pages/japanese.html", "relation": ["editorial", "travels"]},
+	{"title": "The Day They Were Born","src": "../source/TheDayThayWereBorn/1.jpg", "class": "article-w", "link": "pages/daythaywereborn.html", "relation": ["portraits"]},
+	{"title": "Falling in Love with Strangers","src": "../source/FallingInLoveWithStrangers/1.jpg", "class": "article-w", "link": "pages/fallinginlove.html", "relation": ["portraits"]},
+	{"title": "Shades of Lifeguard Towers","src": "../source/ShadesOfLifeguardTower/1.jpg", "class": "article-w", "link": "pages/shadeoflgtower.html", "relation": ["architecture", "travels"]},
+	{"title": "Talking Portraits","src": "../source/TalkingPortraits/1.jpg", "class": "article-h", "link": "pages/talkingportraits.html", "relation": ["portraits"]},
+	{"title": "Vintage out of Garage","src": "../source/VintageOutOfGarage/3.jpg", "class": "article-h", "link": "pages/vintageoutofgarage.html", "relation": ["editorial"]},
+	{"title": "Multicultural Urbanity","src": "../source/MulticulturalUrbanity/2.jpg", "class": "article-h", "link": "pages/multiculturalurbany.html", "relation": ["portraits", "travels"]},
+	{"title": "Road Tripping for Mountains","src": "../source/RoadTrippingForMountains/1.jpg", "class": "article-w", "link": "pages/roadtripping.html", "relation": ["travels"]}
+]
