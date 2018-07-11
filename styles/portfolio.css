@@ -33,6 +33,62 @@ html, body {
 	header > nav > ul > li > a:hover {
 		color: #D16768;
 	}
+	h1 {
+		font-size: 5rem;
+		text-align: center;
+		margin: 50px auto;
+	}
+	.container {
+		width: 70%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.container > article {
+		width: 30%;
+		margin: 20px;
+		position: relative;
+	}
+	.container > article .fon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0;
+		transition: opacity .3s ease;
+	}
+	.container > article .fon:hover {
+		opacity: .3;
+	}
+	.container > article img {
+		width: 100%;
+	}
+	.pagination {
+		margin: 50px;
+	}
+	.pagination > nav > ul {
+		display: flex;
+		justify-content: center;
+	}
+	.pagination > nav > ul a {
+		padding: 10px 20px;
+		background-color: black;
+		color: white;
+		text-decoration: none;
+		margin: 2px;
+		font-size: 2rem;
+		transition: .3s opacity ease;
+	}
+	.pagination > nav > ul a:hover {
+		opacity: .8;
+	}
+	.pagination > nav > ul a.active {
+		background-color: #D16768;
+	}
 	footer {
 		margin-top: 50px;
 		display: flex;
@@ -238,6 +294,7 @@ html, body {
 		margin: -100px 0 0 -52px;
 		height: 85vh;
 		padding: 50px;
+		padding-bottom: 0;
 		padding-top: 125px;
 		padding-right: 0;
 		background: white;
@@ -248,6 +305,7 @@ html, body {
 		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 		text-align: center;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
 		justify-content: center;
     }

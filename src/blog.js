@@ -16,6 +16,7 @@ require.forEach(function(item, i) {
 		var figure = document.createElement('FIGURE');
 		var img = document.createElement('IMG');
 		img.setAttribute('src', item.src);
+		img.setAttribute('alt', item.title);
 		figure.appendChild(img);
 		imgLink.appendChild(figure);
 		blogItemLink.appendChild(imgLink);
@@ -58,6 +59,7 @@ function loadItems(e) {
 		var figure = document.createElement('FIGURE');
 		var img = document.createElement('IMG');
 		img.setAttribute('src', require[i].src);
+		img.setAttribute('alt', require[i].title);
 		figure.appendChild(img);
 		imgLink.appendChild(figure);
 		blogItemLink.appendChild(imgLink);

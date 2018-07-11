@@ -23,6 +23,7 @@ function loadOtherItems() {
 					a.setAttribute('href', item.link.slice(6));
 					let img = document.createElement('IMG');
 					img.setAttribute('src', item.src);
+					img.setAttribute('alt', item.title);
 					let divFon = document.createElement('DIV');
 					divFon.classList = 'fon';
 					let h3 = document.createElement('H3');
