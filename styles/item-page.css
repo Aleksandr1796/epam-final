@@ -358,8 +358,7 @@ html, body {
 		color: #333333;
 	}
 	.modal-dialog {
-		width: 100%;
-		height: 100%;
+		height: 100vh;
         position: fixed;
         top: 0;
         right: 0;
@@ -369,8 +368,7 @@ html, body {
         z-index: 99999;
         transition: opacity 400ms ease-in;
         display: none;
-		pointer-events: none;
-		text-align: center;
+        pointer-events: none;
     }
     .modal-dialog:target {
         display: block;
@@ -378,14 +376,15 @@ html, body {
 	}
 	.modal-dialog > div {
 		position: relative;
-		display: inline-block;
 		padding: 50px;
+		display: flex;
+		width: 95%;
+		height: 90%;
 		margin: 0 auto;
-		margin-right: 0;
 	}
     .modal-dialog > div > img {
-		height: auto;
-		width: 65%;
+		height: 100%;
+		width: auto;
         margin: 0 auto;
     }
     .modal-dialog > div h2 {
@@ -400,7 +399,7 @@ html, body {
     .checkbox:checked + .checkbox-custom::before {
         content: "";             /* Добавляем наш псевдоэлемент */
         display: block;			 /* Делаем его блочным элементом */
-        position: absolute;     /* Позиционируем его абсолютным образом*/
+        position: absolute;      /* Позиционируем его абсолютным образом */
         /* Задаем расстояние от верхней, правой, нижней и левой границы */
         top: 2px;
         right: 2px;
@@ -409,19 +408,10 @@ html, body {
         background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
         border-radius: 2px;
 	}
-	#leftControl {
-		left: 10%;
-	}
-	#rightControl {
-		right: 10%;
-	}
 	.modal-dialog > div > a {
-		position: absolute;
+		margin: auto 0;
 		text-decoration: none;
 		color: #cdcdcd;
-	}
-	.modal-dialog > div > a:not(.close) {
-		top: 45%;
 	}
 	.modal-dialog > div > a > i.fas {
 		font-size: 60px;
@@ -430,13 +420,13 @@ html, body {
         color: #e5e5e5;
         line-height: 25px;
         position: absolute;
-        right: 6%;
+        right: 7%;
         top: 5%;
         text-align: center;
         width: 28px;
         font-size: 36px;
         text-decoration: none;
-		font-weight: bold;
+        font-weight: bold;
     }
 }
 @media screen and (min-width: 960px) and (max-width: 1219px) {
