@@ -566,9 +566,78 @@ html, body {
 	footer > section > article > a:hover {
 		color: #333333;
 	}
-	#open-modal {
-		display: none;
+	.modal-dialog {
+		height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+    }
+    .modal-dialog:target {
+        display: block;
+        pointer-events: auto;
 	}
+	.modal-dialog > div {
+		position: relative;
+		padding: 50px;
+		width: 90%;
+		height: 90%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+    .modal-dialog > div > img {
+		top: 50%;
+		width: 90%;
+        margin: 0 auto;
+    }
+    .modal-dialog > div h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .modal-dialog > div p {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+        content: "";             /* Добавляем наш псевдоэлемент */
+        display: block;			 /* Делаем его блочным элементом */
+        position: absolute;      /* Позиционируем его абсолютным образом */
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+	}
+	.modal-dialog > div > a {
+		margin: auto 0;
+		text-decoration: none;
+		color: #cdcdcd;
+	}
+	.modal-dialog > div > a > i.fas {
+		font-size: 60px;
+	}
+    .close {
+        color: #e5e5e5;
+        line-height: 25px;
+        position: absolute;
+        right: 7%;
+        top: 5%;
+        text-align: center;
+        width: 28px;
+        font-size: 36px;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
 @media screen and (min-width: 480px) and (max-width: 959px) {
 	.main-nav {
@@ -802,9 +871,78 @@ html, body {
 	footer > section > article > a:hover {
 		color: #333333;
 	}
-	#open-modal {
-		display: none;
+	.modal-dialog {
+		height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+    }
+    .modal-dialog:target {
+        display: block;
+        pointer-events: auto;
 	}
+	.modal-dialog > div {
+		position: relative;
+		padding: 50px;
+		width: 90%;
+		height: 90%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+    .modal-dialog > div > img {
+		top: 50%;
+		width: 90%;
+        margin: 0 auto;
+    }
+    .modal-dialog > div h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .modal-dialog > div p {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+        content: "";             /* Добавляем наш псевдоэлемент */
+        display: block;			 /* Делаем его блочным элементом */
+        position: absolute;      /* Позиционируем его абсолютным образом */
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+	}
+	.modal-dialog > div > a {
+		margin: auto 0;
+		text-decoration: none;
+		color: #cdcdcd;
+	}
+	.modal-dialog > div > a > i.fas {
+		font-size: 60px;
+	}
+    .close {
+        color: #e5e5e5;
+        line-height: 25px;
+        position: absolute;
+        right: 7%;
+        top: 5%;
+        text-align: center;
+        width: 28px;
+        font-size: 36px;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
 @media screen and (max-width: 479px) {
 	.main-nav {
@@ -882,7 +1020,7 @@ html, body {
 	  margin: -100px 0 0 -52px;
 	  height: 85vh;
       padding: 50px;
-      padding-top: 125px;
+      padding-top: 100px;
       padding-right: 0;
       background: white;
       list-style-type: none;
@@ -903,7 +1041,7 @@ html, body {
       transition: color 0.3s ease;
     }
     #menu li {
-      margin: 50px 0;
+      margin: 30px 0;
       font-size: 3rem;
     }
     #menuToggle input:checked ~ ul {
@@ -1022,7 +1160,75 @@ html, body {
 	footer > section > article > a:hover {
 		color: #333333;
 	}
-	#open-modal {
-		display: none;
+	.modal-dialog {
+		height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+    }
+    .modal-dialog:target {
+        display: block;
+        pointer-events: auto;
 	}
+	.modal-dialog > div {
+		position: relative;
+		width: 75%;
+		height: 90%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+    .modal-dialog > div > img {
+		top: 50%;
+		width: 90%;
+        margin: 0 auto;
+    }
+    .modal-dialog > div h2 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .modal-dialog > div p {
+        font-size: 18px;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+        content: "";             /* Добавляем наш псевдоэлемент */
+        display: block;			 /* Делаем его блочным элементом */
+        position: absolute;      /* Позиционируем его абсолютным образом */
+        /* Задаем расстояние от верхней, правой, нижней и левой границы */
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+        border-radius: 2px;
+	}
+	.modal-dialog > div > a {
+		margin: auto 0;
+		text-decoration: none;
+		color: #cdcdcd;
+	}
+	.modal-dialog > div > a > i.fas {
+		font-size: 60px;
+	}
+    .close {
+        color: #e5e5e5;
+        line-height: 25px;
+        position: absolute;
+        right: 7%;
+        top: 5%;
+        text-align: center;
+        width: 28px;
+        font-size: 36px;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
